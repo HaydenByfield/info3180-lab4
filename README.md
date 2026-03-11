@@ -9,4 +9,11 @@ $ python -m venv venv (you may need to use python3 instead)
 $ source venv/bin/activate (or .\venv\Scripts\activate on Windows)
 $ pip install -r requirements.txt
 $ flask --app app --debug run
+$ python -c 'import secrets; print(secrets.token_hex())'
+# Set up Migration system
+$ flask db init 
+# Generate change instructions 
+$ flask db migrate 
+# Apply changes to database
+$ flask db upgrade 
 ```
